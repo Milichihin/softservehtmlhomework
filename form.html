@@ -1,91 +1,157 @@
 <!DOCTYPE html>
 <html lang="uk">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Анкета</title>
-</head>
-
-<body>
-    <h1>Анкета</h1>
-    <form method="post" action="https://formspree.io/milichihin@gmail.com">
-        <fieldset>
-            <label for="name">Ваше ім'я:<br>
-            <input type="text" id="name" placeholder="Впишіть своє ім'я" required name="name">
-            </label>
-        </fieldset>
-        <br>
-        <fieldset>
-            <label>На яку адресу надіслати результати тесту?<br>
-            <input type="email" placeholder="Адреса електронної пошти" required name="email">
-            </label>
-        </fieldset>
-        <br>
-        <fieldset>
-            <label>Виберіть інструменти для веб дизайну:</label><br>
-            <label for="ins1"><input type="checkbox" id="ins1" name="instrument" value="PPT">Powerpoint</label><br>
-            <label for="ins2"><input type="checkbox" id="ins2" name="instrument" value="Sketch">Sketch</label><br>
-            <label for="ins3"><input type="checkbox" id="ins3" name="instrument" value="Figma">Figma</label><br>
-            <label for="ins4"><input type="checkbox" id="ins4" name="instrument" value="Audition">Audition</label><br>
-            <label for="ins5"><input type="checkbox" id="ins5" name="instrument" value="InVision">InVision</label><br>
-            <label for="ins6"><input type="checkbox" id="ins6" name="instrument" value="Word">Word</label><br>
-            <label for="ins7"><input type="checkbox" id="ins7" name="instrument" value="Adobe Photoshop">Adobe Photoshop</label><br>
-            <label for="ins8"><input type="checkbox" id="ins8" name="instrument" value="Adobe Illustrator">Adobe Illustrator</label><br>
-            <label for="ins9"><input type="checkbox" id="ins9" name="instrument" value="Corel">Corel</label><br>
-            <label for="ins0"><input type="checkbox" id="ins0" name="instrument" value="Vegas">Vegas</label>
-        </fieldset>
-        <br>
-        <fieldset>
-            <label>Хто вивчає проблеми користувача?</label><br>
-            <label for="problem1"><input type="radio" id="problem1" name="user problem" value="UI-дизайнер" />UI-дизайнер</label><br>
-            <label for="problem2"><input type="radio" id="problem2" name="user problem" value="UX-дизайнер" />UX-дизайнер</label><br>
-            <label for="problem3"><input type="radio" id="problem3" name="user problem" value="Junior FrontEnd Developer" />Junior FrontEnd Developer</label>
-        </fieldset>
-        <br>
-        <!-- Просто хотел проверить, как работает эта кнопка ))) -->
-        <input type="button" onclick="alert('Привiт')" value="Натисни мене просто так">
-        <br>
-        <br>
-        <fieldset>
-            Який курс підійшов би вам найбільше?<br>
-            <label for="kurs1"><input type="radio" id="kurs1" name="kurs" value="Coursera" />Coursera</label><br>
-            <label for="kurs2"><input type="radio" id="kurs2" name="kurs" value="Udemy" />Udemy</label><br>
-            <label for="kurs3"><input type="radio" id="kurs3" name="kurs" value="Edx" />Edx</label><br>
-            <label for="kurs4"><input type="radio" id="kurs4" name="kurs" value="TryDesignLab" />TryDesignLab</label><br>
-            <label for="kurs5"><input type="radio" id="kurs5" name="kurs" value="Skillshare" />Skillshare</label>
-        </fieldset>
-        <br>
-        <fieldset>
-            Навіщо Ви заповнювали цю анкету?<br>
-            <textarea rows="5" cols="50" placeholder="Придумайте що-небудь" name="Навіщо"></textarea>
-        </fieldset>
-        <br>
-        <fieldset>
-            <h3>Розкажіть про себе детальніше</h3>
-            Скільки вам років?
-            <input type="number" name="age" min="3" max="100" /><br><br> 
-            Дата Вашого народження?
-            <!-- Валидатор предупреждает, что тип даты может не работать на некоторых браузерах -->
-            <input type="date" name="bd" min="1900-01-01" max="2015-01-01" /><br><br>
-            Яка Ваша стать?<br>
-            <label for="male"><input type="radio" id="male" name="sex" value="male" />Чоловiча</label>
-            <label for="female"><input type="radio" id="female" name="sex" value="female" />Жiноча</label>
-            <label for="neuter"><input type="radio" id="neuter" name="sex" value="neuter" />Середній рід</label><br><br>
-            Вкладіть свою фотографію
-            <input type="file" name="photo" multiple accept="image/*" /><br>
-        </fieldset>
-        <br>
-        <input type="reset" value="Скинути">
-        <input type="submit" value="Надіслати">
-        <br>
-        <!-- добавил пробелы, чтобы кнопки были хоть немного видны внизу -->
-        <br>
-        <br>
-        <br>
-        <br>
-    </form>
-</body>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Анкета</title>
+    </head>
+    <body>
+        <h1>Анкета</h1>
+        <form method="post" action="https://formspree.io/milichihin@gmail.com">
+            <fieldset>
+                <label for="name">
+                    Ваше ім'я:<br>
+                    <input type="text" id="name" placeholder="Впишіть своє ім'я" required name="name">
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label>
+                    На яку адресу надіслати результати тесту?<br>
+                    <input type="email" placeholder="Адреса електронної пошти" required name="email">
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label>Виберіть інструменти для веб дизайну:</label>
+                <br>
+                <label for="ins1">
+                    <input type="checkbox" id="ins1" name="instrument" value="PPT">Powerpoint
+                </label>
+                <br>
+                <label for="ins2">
+                    <input type="checkbox" id="ins2" name="instrument" value="Sketch">Sketch
+                </label>
+                <br>
+                <label for="ins3">
+                    <input type="checkbox" id="ins3" name="instrument" value="Figma">Figma
+                </label>
+                <br>
+                <label for="ins4">
+                    <input type="checkbox" id="ins4" name="instrument" value="Audition">Audition
+                </label>
+                <br>
+                <label for="ins5">
+                    <input type="checkbox" id="ins5" name="instrument" value="InVision">InVision
+                </label>
+                <br>
+                <label for="ins6">
+                    <input type="checkbox" id="ins6" name="instrument" value="Word">Word
+                </label>
+                <br>
+                <label for="ins7">
+                    <input type="checkbox" id="ins7" name="instrument" value="Adobe Photoshop">Adobe Photoshop
+                </label>
+                <br>
+                <label for="ins8">
+                    <input type="checkbox" id="ins8" name="instrument" value="Adobe Illustrator">Adobe Illustrator
+                </label>
+                <br>
+                <label for="ins9">
+                    <input type="checkbox" id="ins9" name="instrument" value="Corel">Corel
+                </label>
+                <br>
+                <label for="ins0">
+                    <input type="checkbox" id="ins0" name="instrument" value="Vegas">Vegas
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label>Хто вивчає проблеми користувача?</label>
+                <br>
+                <label for="problem1">
+                    <input type="radio" id="problem1" name="user problem" value="UI-дизайнер"/>UI-дизайнер
+                </label>
+                <br>
+                <label for="problem2">
+                    <input type="radio" id="problem2" name="user problem" value="UX-дизайнер"/>UX-дизайнер
+                </label>
+                <br>
+                <label for="problem3">
+                    <input type="radio" id="problem3" name="user problem" value="Junior FrontEnd Developer"/>Junior FrontEnd Developer
+                </label>
+            </fieldset>
+            <br>
+            <!-- Просто хотел проверить, как работает эта кнопка ))) -->
+            <input type="button" onclick="alert('Привiт')" value="Натисни мене просто так">
+            <br>
+            <br>
+            <fieldset>
+                Який курс підійшов би вам найбільше?<br>
+                <label for="kurs1">
+                    <input type="radio" id="kurs1" name="kurs" value="Coursera"/>Coursera
+                </label>
+                <br>
+                <label for="kurs2">
+                    <input type="radio" id="kurs2" name="kurs" value="Udemy"/>Udemy
+                </label>
+                <br>
+                <label for="kurs3">
+                    <input type="radio" id="kurs3" name="kurs" value="Edx"/>Edx
+                </label>
+                <br>
+                <label for="kurs4">
+                    <input type="radio" id="kurs4" name="kurs" value="TryDesignLab"/>TryDesignLab
+                </label>
+                <br>
+                <label for="kurs5">
+                    <input type="radio" id="kurs5" name="kurs" value="Skillshare"/>Skillshare
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                Навіщо Ви заповнювали цю анкету?<br>
+                <textarea rows="5" cols="50" placeholder="Придумайте що-небудь" name="Навіщо"></textarea>
+            </fieldset>
+            <br>
+            <fieldset>
+                <h3>Розкажіть про себе детальніше</h3>
+                Скільки вам років?
+            <input type="number" name="age" min="3" max="100"/>
+                <br>
+                <br>
+                Дата Вашого народження?
+            
+                <!-- Валидатор предупреждает, что тип даты может не работать на некоторых браузерах -->
+                <input type="date" name="bd" min="1900-01-01" max="2015-01-01"/>
+                <br>
+                <br>
+                Яка Ваша стать?<br>
+                <label for="male">
+                    <input type="radio" id="male" name="sex" value="male"/>Чоловiча
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="sex" value="female"/>Жiноча
+                </label>
+                <label for="neuter">
+                    <input type="radio" id="neuter" name="sex" value="neuter"/>Середній рід
+                </label>
+                <br>
+                <br>
+                Вкладіть свою фотографію
+            <input type="file" name="photo" multiple accept="image/*"/>
+                <br>
+            </fieldset>
+            <br>
+            <input type="reset" value="Скинути">
+            <input type="submit" value="Надіслати">
+            <br>
+            <!-- добавил пробелы, чтобы кнопки были хоть немного видны внизу -->
+            <br>
+            <br>
+            <br>
+            <br>
+        </form>
+    </body>
 </html>
